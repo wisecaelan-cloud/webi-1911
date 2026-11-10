@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WEBI 1911 Week 11 Street Dice</title>
+    <style>
+          /* animation: name duration function count  */
+		.roll {
+			/* position:absolute; */
+            /* set animation to use the spin-it animation function */
+             /* animation: spin-it 3s linear once; */
+             animation: spin-it 3s ease-out 1;
+             /*Pause animation on page load */
+             animation-play-state: running; 
+		}
+
+        @keyframes spin-it {
+        /* spin it 6 turns in 3 seconds */
+          100% {transform: rotate(4turn); filter: blur(5px) hue-rotate(45deg);}
+          
+        }
+        /* end animation */
+    
+        /* score css starts here */
+            .score {font-size: 2.5em; font-weight: bold;}
+            
+            .score{
+            -webkit-animation: 4s ease 0s normal forwards 1 fadein;
+            animation: 4s ease 0s normal forwards 1 fadein;
+        }
+
+        @keyframes fadein{
+            0% { opacity:0; }
+            66% { opacity:0; }
+            100% { opacity:1; }
+        }
+
+        @-webkit-keyframes fadein{
+            0% { opacity:0; }
+            66% { opacity:0; }
+            100% { opacity:1; }
+        }
+    /* score css ends here */
+    
+    </style>
+</head>
+<body>
+    <script>
+        var score = 0; // declare variable score and set it equal to 0.
+        var dieImage = ""; // declare variable dieImage and set it equal to "".
+
+        // nest the following code in a for loop and have it run twice.
+        for (var i = 0; i < 2; i++) {
+            var dieRoll = Math.floor( Math.random() * 6 ) + 1;
+            dieImage += '<img src="images/' + dieRoll + '.jpg" alt="' + dieRoll + '" class="roll">';
+            score = score + dieRoll; 
+            // add dieRoll to score variable each time the loop runs.
+        }
+        // end for loop here.
+
+        // document write the dieImage variable
+        document.write(dieImage);
+
+        // document write the score variable wrapped in a styled container
+        document.write('<div class="score">Total Score: ' + score + '</div>');
+    </script>
+</body>
+</html>
