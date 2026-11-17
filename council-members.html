@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Minneapolis City Council Members</title>
+  </head>
+  <body>
+    <h1>Minneapolis City Council Members</h1>
+    <script>
+      var council = [
+        "Elliott Payne",
+        "Robin Wonsley",
+        "Michael Rainville",
+        "LaTrisha Vetaw",
+        "Pearll Warren",
+        "Jamal Osman",
+        "Elizabeth Shaffer",
+        "Soren Stevenson",
+        "Jason Chavez",
+        "Aisha Chughtai",
+        "Jamison Whiting",
+        "Aurin Chowdhury",
+        "Linea Palmisano"
+      ];
+
+      var urls = [
+        "https://minneapolismn.gov",
+        "https://minneapolismn.gov",
+        "https://minneapolismn.gov",
+        "https://minneapolismn.gov",
+        "https://minneapolismn.gov",
+        "https://minneapolismn.gov",
+        "https://minneapolismn.gov",
+        "https://minneapolismn.gov",
+        "https://minneapolismn.gov",
+        "https://minneapolismn.gov",
+        "https://minneapolismn.gov",
+        "https://minneapolismn.gov",
+        "https://minneapolismn.gov"
+      ];
+
+      for (var i = 0; i < council.length; i++) {
+        document.write("<p>Ward " + (i + 1) + ": <a href='" + urls[i] + "'>" + council[i] + "</a></p>");
+      }
+    </script>
+  </body>
+</html>
